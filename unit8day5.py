@@ -1,12 +1,12 @@
-#dogAge = int(input("What is your dog's age: "))
-#dogAge*=7
-#print("You dog is", dogAge, "years old.")
+dogAge = int(input("What is your dog's age: "))
+dogAge*=7
+print("You dog is", dogAge, "years old.")
 
-#number = int(input("Enter a whole number: "))
-#if (number % 2) == 0:
-#    print("Your number is even.")
-#else:
-#    print("Your number is odd")
+number = int(input("Enter a whole number: "))
+if (number % 2) == 0:
+    print("Your number is even.")
+else:
+    print("Your number is odd")
 
 
 def greeting():
@@ -21,8 +21,8 @@ def greeting():
     print(food, end="")
     print(" sounds yummy.")
     print(name, end="")
-    goToGo = input(", do you have to go? (True/False) ")
-    if(goToGo == "True"):
+    goToGo = input(", do you have to go? (yes/no) ")
+    if(goToGo == "no"):
         print("Goodbye ", name)
     else:
         greeting()
