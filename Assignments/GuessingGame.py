@@ -4,12 +4,12 @@ def game():
     numberOfGuess = 0
     import random
     ranNum = random.randint(1, 10)
-    print(ranNum)
+    #print(ranNum)
     print("This is the Number Guessing Game.")
     try:
         currentGuess = int(input("Guess a number between 1 and 10 (You have 3 Guesses)\nWhat is your guess: "))
-        while currentGuess > 10:
-            currentGuess = int(input("Your guess is greater than 10. You number has to be between 1 and 10\nWhat is your guess: "))
+        while currentGuess > 10 or currentGuess < 1:
+            currentGuess = int(input("Your guess is out of the range. You number has to be between 1 and 10\nWhat is your guess: "))
         while numberOfGuess < 3:
             if currentGuess == ranNum:
                 print("You win!!!! Tacos!!!!")
@@ -21,12 +21,14 @@ def game():
                 highnumber = sortingList[1]
                 lownumber = sortingList[0]
                 numberDifference = highnumber - lownumber
+
                 if numberDifference > 2:
                     print("You are freezing cold.")
                 elif numberDifference == 2:
                     print("You are getting warmer.")
                 else:
                     print("You are burning hot.")
+
                 if numberOfGuess == 1:
                     print("You have 2 more guesses")
                     currentGuess = int(input("What is you guess: "))
